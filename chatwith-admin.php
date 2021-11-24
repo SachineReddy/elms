@@ -91,11 +91,7 @@ foreach($results as $result)
                     <div class="message-wrapper me">
                         <div class="circle-wrapper"><img src="assets/images/profile-image-3.jpg" class="circle" alt=""></div>
                         <div class="text-wrapper"><?php $st=$result->admin;
-                       // if($st==1){
-
-                       //  echo htmlentities($result->chat);
-
-                    // };?></div>
+                      ?></div>
                     </div>
                    
                 </div>
