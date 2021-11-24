@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 09, 2020 at 08:15 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.1.30
+-- Host: 127.0.0.1
+-- Generation Time: Nov 24, 2021 at 06:22 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -40,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
-(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', '2020-07-07 09:30:42');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2021-11-23 16:35:01');
 
 -- --------------------------------------------------------
 
@@ -61,9 +60,11 @@ CREATE TABLE `tbldepartments` (
 --
 
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
-(1, 'Human Resource', 'HR', 'HR001', '2017-11-01 07:16:25'),
-(2, 'Information Technology', 'IT', 'IT001', '2017-11-01 07:19:37'),
-(3, 'Operations', 'OP', 'OP1', '2017-12-02 21:28:56');
+(1, 'Human Resource', 'HR', 'HR', '2021-11-01 07:16:25'),
+(2, 'Information Technology', 'IT', 'IT', '2021-11-01 07:19:37'),
+(3, 'Operations', 'OP', 'OP', '2021-12-02 21:28:56'),
+(5, 'Computer Science', 'CS', 'CS', '2021-12-02 21:28:56'),
+(6, 'Electronics', 'EE', 'EE', '2021-12-02 21:28:56');
 
 -- --------------------------------------------------------
 
@@ -94,8 +95,8 @@ CREATE TABLE `tblemployees` (
 --
 
 INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
-(1, 'PHPTPOINT101', 'Gautam', 'Arya', 'er.gautamarya@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '3 February, 1999', 'Information Technology', 'New Delhi', 'Delhi', 'India', '9608993215', 1, '2020-07-07 11:29:59'),
-(2, 'PHPTPOINT1012', 'sanjeev', 'kumar', 'phptpoint@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '3 February, 1990', 'Information Technology', 'Noida ', 'Up', 'India', '8587944255', 1, '2017-11-10 13:40:02');
+(1, 'DB101', 'Sachine', 'Reddy', 'sreddy0978@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Male', '20 May, 1992', 'Computer Science', 'Montezuma', 'San Diego', 'California', '9999999999', 1, '2021-07-07 11:29:59'),
+(2, 'DB102', 'Twinkal', 'Gada', 'tgada9137@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Female', '3 February, 1990', 'Computer Science', 'El Cajon', 'San Diego', 'California', '1111111111', 1, '2021-01-01 13:40:02');
 
 -- --------------------------------------------------------
 
@@ -122,11 +123,9 @@ CREATE TABLE `tblleaves` (
 --
 
 INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`, `PostingDate`, `AdminRemark`, `AdminRemarkDate`, `Status`, `IsRead`, `empid`) VALUES
-(7, 'Casual Leave', '10/02/2020', '29/10/2020', 'test', '2020-05-01 13:11:21', 'publishing industries for ', '2017-12-02 23:26:27 ', 2, 1, 1),
-(8, 'Medical Leave', '21/10/2020', '25/10/2020', 'test', '2020-05-01 11:14:14', 'Lorem ipsum  borum.', '2017-12-02 23:24:39 ', 1, 1, 1),
-(9, 'Medical Leave', '08/12/2022', '12/12/2022', 'test', '2020-06-01 18:26:01', 'ok', '2020-07-07 16:13:33 ', 2, 1, 2),
-(10, 'Compensatory Off', '25/12/2020', '25/12/2022', 'test', '2020-07-02 08:29:07', 'done', '2017-12-03 14:06:12 ', 1, 1, 1),
-(11, 'Casual Leave', '11/02/2033', '11/02/2033', 'dbdfb', '2020-07-07 10:51:37', 'goooo', '2020-07-07 16:30:52 ', 1, 1, 1);
+(15, 'Casual Leave', '22/12/2021', '21/12/2021', 'Day Off', '2021-11-24 17:14:53', NULL, NULL, 0, 0, 1),
+(16, 'Compensatory Off', '28/12/2021', '27/12/2021', 'Comp Off', '2021-11-24 17:15:17', 'Rejected', '2021-11-24 22:50:47 ', 2, 1, 1),
+(17, 'Casual Leave', '23/12/2021', '22/12/2021', 'Break Day', '2021-11-24 17:16:43', 'Granted', '2021-11-24 22:50:21 ', 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -146,9 +145,10 @@ CREATE TABLE `tblleavetype` (
 --
 
 INSERT INTO `tblleavetype` (`id`, `LeaveType`, `Description`, `CreationDate`) VALUES
-(1, 'Casual Leave', 'Casual Leave', '2017-11-01 12:07:56'),
-(2, 'Medical Leave', 'Medical Leave', '2017-11-06 13:16:09'),
-(3, 'Compensatory Off', 'Compensatory Off', '2017-11-06 13:16:38');
+(1, 'Casual Leave', 'Casual Leave ', '2021-11-01 12:07:56'),
+(2, 'Medical Leave', 'Medical Leave', '2021-11-06 12:16:09'),
+(3, 'Compensatory Off', 'Compensatory Off', '2021-11-06 12:16:38'),
+(4, 'Sabbatical', 'Sabbatical', '2021-11-24 07:50:55');
 
 --
 -- Indexes for dumped tables
@@ -199,7 +199,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `tbldepartments`
 --
 ALTER TABLE `tbldepartments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tblemployees`
@@ -211,13 +211,13 @@ ALTER TABLE `tblemployees`
 -- AUTO_INCREMENT for table `tblleaves`
 --
 ALTER TABLE `tblleaves`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tblleavetype`
 --
 ALTER TABLE `tblleavetype`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
