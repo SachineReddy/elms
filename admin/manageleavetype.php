@@ -104,7 +104,7 @@ foreach($results as $result)
                                             <td> <?php echo htmlentities($cnt);?></td>
                                             <td><?php echo htmlentities($result->LeaveType);?></td>
                                             <td><?php echo htmlentities($result->Description);?></td>
-                                            <td><?php echo htmlentities($result->CreationDate);?></td>
+                                            <td><?php echo htmlentities(date('m-d-Y H:i:s',strtotime($result->CreationDate)));?></td>
                                             <td><a href="editleavetype.php?lid=<?php echo htmlentities($result->id);?>"><i class="material-icons">mode_edit</i></a>
                                             <a href="manageleavetype.php?del=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you want to delete');"> <i class="material-icons">delete_forever</i></a> </td>
                                         </tr>

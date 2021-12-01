@@ -76,6 +76,11 @@ $msg="Employee record updated Successfully";
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
+
+label[for="birthdate"]{
+  top: -1em;
+  font-size: 0.8rem;
+}
         </style>
 
 

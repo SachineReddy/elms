@@ -132,7 +132,7 @@ if($stats){
 
 
                                              </td>
-                                              <td><?php echo htmlentities($result->RegDate);?></td>
+                                              <td><?php echo htmlentities(date('m-d-Y H:i:s',strtotime($result->RegDate)));?></td>
                                             <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>"><i class="material-icons">mode_edit</i></a>
                                         <?php if($result->Status==1)
  {?>

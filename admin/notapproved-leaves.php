@@ -102,7 +102,7 @@ foreach($results as $result)
                                             <td> <b><?php echo htmlentities($cnt);?></b></td>
                                               <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>" target="_blank"><?php echo htmlentities($result->FirstName." ".$result->LastName);?>(<?php echo htmlentities($result->EmpId);?>)</a></td>
                                             <td><?php echo htmlentities($result->LeaveType);?></td>
-                                            <td><?php echo htmlentities($result->PostingDate);?></td>
+                                            <td><?php echo htmlentities(date('m-d-Y H:i:s',strtotime($result->PostingDate)));?></td>
                                                                        <td><?php $stats=$result->Status;
 if($stats==1){
                                              ?>

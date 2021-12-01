@@ -100,7 +100,7 @@ foreach($results as $result)
                                             <td><?php echo htmlentities($result->FromDate);?></td>
                                             <td><?php echo htmlentities($result->ToDate);?></td>
                                            <td><?php echo htmlentities($result->Description);?></td>
-                                            <td><?php echo htmlentities($result->PostingDate);?></td>
+                                            <td><?php echo htmlentities(date('m-d-Y H:i:s',strtotime($result->PostingDate)));?></td>
                                             <td><?php if($result->AdminRemark=="")
                                             {
 echo htmlentities('Waiting for Approval');
