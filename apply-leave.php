@@ -19,7 +19,7 @@ $isread=0;
 if($fromdate > $todate){
                 $error=" ToDate should be greater than FromDate ";
            }
-$sql="INSERT INTO tblleaves(LeaveType,ToDate,FromDate,Description,Status,IsRead,empid) VALUES(:leavetype,:todate,:fromdate,:description,:status,:isread,:empid)";
+$sql="INSERT INTO leaves_table(LeaveType,ToDate,FromDate,Description,Status,IsRead,empid) VALUES(:leavetype,:todate,:fromdate,:description,:status,:isread,:empid)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':leavetype',$leavetype,PDO::PARAM_STR);
 $query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
@@ -121,7 +121,7 @@ $error="Something went wrong. Please try again";
 <div class="input-field col  s12">
 <select  name="leavetype" autocomplete="off">
 <option value="">Select leave type...</option>
-<?php $sql = "SELECT  LeaveType from tblleavetype";
+<?php $sql = "SELECT  LeaveType from leavetype_table";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);

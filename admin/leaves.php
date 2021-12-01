@@ -84,7 +84,7 @@ else{
                                     </thead>
                                  
                                     <tbody>
-<?php $sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.EmpId,tblemployees.id,tblleaves.LeaveType,tblleaves.PostingDate,tblleaves.Status from tblleaves join tblemployees on tblleaves.empid=tblemployees.id order by lid desc";
+<?php $sql = "SELECT leaves_table.id as lid,employees_table.FirstName,employees_table.LastName,employees_table.EmpId,employees_table.id,leaves_table.LeaveType,leaves_table.PostingDate,leaves_table.Status from leaves_table join employees_table on leaves_table.empid=employees_table.id order by lid desc";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);

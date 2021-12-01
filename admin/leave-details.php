@@ -13,7 +13,7 @@ $isread=1;
 $did=intval($_GET['leaveid']);  
 date_default_timezone_set('Asia/Kolkata');
 $admremarkdate=date('Y-m-d G:i:s ', strtotime("now"));
-$sql="update tblleaves set IsRead=:isread where id=:did";
+$sql="update leaves_table set IsRead=:isread where id=:did";
 $query = $dbh->prepare($sql);
 $query->bindParam(':isread',$isread,PDO::PARAM_STR);
 $query->bindParam(':did',$did,PDO::PARAM_STR);
@@ -27,7 +27,7 @@ $description=$_POST['description'];
 $status=$_POST['status'];   
 date_default_timezone_set('Asia/Kolkata');
 $admremarkdate=date('Y-m-d G:i:s ', strtotime("now"));
-$sql="update tblleaves set AdminRemark=:description,Status=:status,AdminRemarkDate=:admremarkdate where id=:did";
+$sql="update leaves_table set AdminRemark=:description,Status=:status,AdminRemarkDate=:admremarkdate where id=:did";
 $query = $dbh->prepare($sql);
 $query->bindParam(':description',$description,PDO::PARAM_STR);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
@@ -105,7 +105,7 @@ $msg="Leave updated Successfully";
                                     <tbody>
 <?php 
 $lid=intval($_GET['leaveid']);
-$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.EmpId,tblemployees.id,tblemployees.Gender,tblemployees.Phonenumber,tblemployees.EmailId,tblleaves.LeaveType,tblleaves.ToDate,tblleaves.FromDate,tblleaves.Description,tblleaves.PostingDate,tblleaves.Status,tblleaves.AdminRemark,tblleaves.AdminRemarkDate from tblleaves join tblemployees on tblleaves.empid=tblemployees.id where tblleaves.id=:lid";
+$sql = "SELECT leaves_table.id as lid,employees_table.FirstName,employees_table.LastName,employees_table.EmpId,employees_table.id,employees_table.Gender,employees_table.Phonenumber,employees_table.EmailId,leaves_table.LeaveType,leaves_table.ToDate,leaves_table.FromDate,leaves_table.Description,leaves_table.PostingDate,leaves_table.Status,leaves_table.AdminRemark,leaves_table.AdminRemarkDate from leaves_table join employees_table on leaves_table.empid=employees_table.id where leaves_table.id=:lid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':lid',$lid,PDO::PARAM_STR);
 $query->execute();

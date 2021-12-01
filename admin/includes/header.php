@@ -25,7 +25,7 @@
                                     <li class="notification-drop-title">Notifications</li>
 <?php 
 $isread=0;
-$sql = "SELECT tblleaves.id as lid,tblemployees.FirstName,tblemployees.LastName,tblemployees.EmpId,tblleaves.PostingDate from tblleaves join tblemployees on tblleaves.empid=tblemployees.id where tblleaves.IsRead=:isread";
+$sql = "SELECT leaves_table.id as lid,employees_table.FirstName,employees_table.LastName,employees_table.EmpId,leaves_table.PostingDate from leaves_table join employees_table on leaves_table.empid=employees_table.id where leaves_table.IsRead=:isread";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':isread',$isread,PDO::PARAM_STR);
 $query->execute();

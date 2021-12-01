@@ -12,7 +12,7 @@ if(isset($_POST['update']))
 $lid=intval($_GET['lid']);
 $leavetype=$_POST['leavetype'];
 $description=$_POST['description'];
-$sql="update tblleavetype set LeaveType=:leavetype,Description=:description where id=:lid";
+$sql="update leavetype_table set LeaveType=:leavetype,Description=:description where id=:lid";
 $query = $dbh->prepare($sql);
 $query->bindParam(':leavetype',$leavetype,PDO::PARAM_STR);
 $query->bindParam(':description',$description,PDO::PARAM_STR);
@@ -85,7 +85,7 @@ $msg="Leave type updated Successfully";
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
 <?php
 $lid=intval($_GET['lid']);
-$sql = "SELECT * from tblleavetype where id=:lid";
+$sql = "SELECT * from leavetype_table where id=:lid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':lid',$lid,PDO::PARAM_STR);
 $query->execute();
