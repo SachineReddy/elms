@@ -46,7 +46,6 @@ foreach($results as $result)
                    
                 </ul>
                 <div class="footer">
-                    <p class="copyright"><a href="https://sdsu.instructure.com/"> ELMS </a>©</p>
                 
                 </div>
                 </div>

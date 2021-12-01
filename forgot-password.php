@@ -122,8 +122,7 @@ $msg="Your Password succesfully changed";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <h4 class="font-weight-bold text-center text-danger">Welcome to Employee Leave Management</h4>
-
+                        
                           <div class="col s12 m6 l8 offset-l2 offset-m3">
                               <div class="card white darken-1">
 

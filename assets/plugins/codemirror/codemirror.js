@@ -38,7 +38,6 @@
   var phantom = /PhantomJS/.test(userAgent);
 
   var ios = /AppleWebKit/.test(userAgent) && /Mobile\/\w+/.test(userAgent);
-  // This is woefully incomplete. Suggestions for alternative methods welcome.
   var mobile = ios || /Android|webOS|BlackBerry|Opera Mini|Opera Mobi|IEMobile/i.test(userAgent);
   var mac = ios || /Mac/.test(platform);
   var chromeOS = /\bCrOS\b/.test(userAgent);

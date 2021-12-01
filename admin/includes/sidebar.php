@@ -68,8 +68,7 @@
               
                 </ul>
                    <div class="footer">
-                    <p class="copyright"><a target="__blank" href="https://sdsu.instructure.com/">ELMS </a>©</p>
-                
+                    
                 </div>
                 </div>
             </aside>

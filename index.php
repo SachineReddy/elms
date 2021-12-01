@@ -80,7 +80,6 @@ else{
 
             <main class="mn-inner mt-5">
                 <div class="row d-flex justify-content-center align-items-center">
-        <h4 class="font-weight-bold text-center text-danger">Welcome to Employee Leave Management</h4>
         
                     <div class="col-md-12">
                         <div class="row">
