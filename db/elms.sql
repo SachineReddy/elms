@@ -47,7 +47,7 @@ INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
 -- Table structure for table `tbldepartments`
 --
 
-CREATE TABLE `tbldepartments` (
+CREATE TABLE `departments_table` (
   `id` int(11) NOT NULL,
   `DepartmentName` varchar(150) DEFAULT NULL,
   `DepartmentShortName` varchar(100) NOT NULL,
@@ -59,9 +59,9 @@ CREATE TABLE `tbldepartments` (
 -- Dumping data for table `tbldepartments`
 --
 
-INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
-(1, 'Human Resource', 'HR', 'HR', '2021-11-01 07:16:25'),
-(2, 'Information Technology', 'IT', 'IT', '2021-11-01 07:19:37'),
+INSERT INTO `departments_table` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
+(1, 'Information Technology', 'IT', 'IT', '2021-11-01 07:16:25'),
+(2, 'Human Resource', 'HR', 'HR', '2021-11-01 07:19:37'),
 (3, 'Operations', 'OP', 'OP', '2021-12-02 21:28:56'),
 (5, 'Computer Science', 'CS', 'CS', '2021-12-02 21:28:56'),
 (6, 'Electronics', 'EE', 'EE', '2021-12-02 21:28:56');
@@ -72,7 +72,7 @@ INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `De
 -- Table structure for table `tblemployees`
 --
 
-CREATE TABLE `tblemployees` (
+CREATE TABLE `employees_table` (
   `id` int(11) NOT NULL,
   `EmpId` varchar(100) NOT NULL,
   `FirstName` varchar(150) NOT NULL,
@@ -94,17 +94,18 @@ CREATE TABLE `tblemployees` (
 -- Dumping data for table `tblemployees`
 --
 
-INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
-(1, 'DB101', 'Sachine', 'Reddy', 'sreddy0978@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Male', '20 May, 1992', 'Computer Science', 'Montezuma', 'San Diego', 'California', '9999999999', 1, '2021-07-07 11:29:59'),
-(2, 'DB102', 'Twinkal', 'Gada', 'tgada9137@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Female', '3 February, 1990', 'Computer Science', 'El Cajon', 'San Diego', 'California', '1111111111', 1, '2021-01-01 13:40:02');
-
+INSERT INTO `employees_table` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
+(1, 'DB101', 'Sagar', 'Wankar', 'swankar8053@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Male', '5 September, 1993', 'Computer Science', 'La Jolla', 'San Diego', 'California', '9999998888', 1, '2021-07-05 14:29:59'),
+(2, 'DB102', 'Sachine', 'Reddy', 'sreddy0978@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Male', '20 May, 1992', 'Computer Science', 'Montezuma', 'San Diego', 'California', '9999999999', 1, '2021-07-07 11:29:59'),
+(3, 'DB103', 'Twinkal', 'Gada', 'tgada9137@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Female', '3 February, 1990', 'Computer Science', 'El Cajon', 'San Diego', 'California', '1111111111', 1, '2021-01-01 13:40:02');
+(3, 'DB103', 'Fenikumari', 'Depani', 'tgada9137@sdsu.edu', '202cb962ac59075b964b07152d234b70', 'Female', '6 February, 1993', 'Computer Science', 'El Cajon', 'San Diego', 'California', '1111114587', 1, '2021-01-01 13:55:02');
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `tblleaves`
 --
 
-CREATE TABLE `tblleaves` (
+CREATE TABLE `leaves_tables` (
   `id` int(11) NOT NULL,
   `LeaveType` varchar(110) NOT NULL,
   `ToDate` varchar(120) NOT NULL,
@@ -122,7 +123,7 @@ CREATE TABLE `tblleaves` (
 -- Dumping data for table `tblleaves`
 --
 
-INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`, `PostingDate`, `AdminRemark`, `AdminRemarkDate`, `Status`, `IsRead`, `empid`) VALUES
+INSERT INTO `leaves_tables` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`, `PostingDate`, `AdminRemark`, `AdminRemarkDate`, `Status`, `IsRead`, `empid`) VALUES
 (15, 'Casual Leave', '22/12/2021', '21/12/2021', 'Day Off', '2021-11-24 17:14:53', NULL, NULL, 0, 0, 1),
 (16, 'Compensatory Off', '28/12/2021', '27/12/2021', 'Comp Off', '2021-11-24 17:15:17', 'Rejected', '2021-11-24 22:50:47 ', 2, 1, 1),
 (17, 'Casual Leave', '23/12/2021', '22/12/2021', 'Break Day', '2021-11-24 17:16:43', 'Granted', '2021-11-24 22:50:21 ', 1, 1, 2);
@@ -133,7 +134,7 @@ INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`,
 -- Table structure for table `tblleavetype`
 --
 
-CREATE TABLE `tblleavetype` (
+CREATE TABLE `leavetype_table` (
   `id` int(11) NOT NULL,
   `LeaveType` varchar(200) DEFAULT NULL,
   `Description` mediumtext DEFAULT NULL,
@@ -144,7 +145,7 @@ CREATE TABLE `tblleavetype` (
 -- Dumping data for table `tblleavetype`
 --
 
-INSERT INTO `tblleavetype` (`id`, `LeaveType`, `Description`, `CreationDate`) VALUES
+INSERT INTO `leavetype_table` (`id`, `LeaveType`, `Description`, `CreationDate`) VALUES
 (1, 'Casual Leave', 'Casual Leave ', '2021-11-01 12:07:56'),
 (2, 'Medical Leave', 'Medical Leave', '2021-11-06 12:16:09'),
 (3, 'Compensatory Off', 'Compensatory Off', '2021-11-06 12:16:38'),
@@ -163,26 +164,26 @@ ALTER TABLE `admin`
 --
 -- Indexes for table `tbldepartments`
 --
-ALTER TABLE `tbldepartments`
+ALTER TABLE `departments_table`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tblemployees`
 --
-ALTER TABLE `tblemployees`
+ALTER TABLE `employees_table`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tblleaves`
 --
-ALTER TABLE `tblleaves`
+ALTER TABLE `leaves_table`
   ADD PRIMARY KEY (`id`),
   ADD KEY `UserEmail` (`empid`);
 
 --
 -- Indexes for table `tblleavetype`
 --
-ALTER TABLE `tblleavetype`
+ALTER TABLE `leavetype_table`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -198,25 +199,25 @@ ALTER TABLE `admin`
 --
 -- AUTO_INCREMENT for table `tbldepartments`
 --
-ALTER TABLE `tbldepartments`
+ALTER TABLE `departments_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tblemployees`
 --
-ALTER TABLE `tblemployees`
+ALTER TABLE `employees_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblleaves`
 --
-ALTER TABLE `tblleaves`
+ALTER TABLE `leaves_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tblleavetype`
 --
-ALTER TABLE `tblleavetype`
+ALTER TABLE `leavetype_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
