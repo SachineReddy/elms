@@ -1,5 +1,5 @@
      <aside id="slide-out" class="side-nav white fixed">
-                <div class="side-nav-wrapper">
+                <div class="side-nav-wrapper" style="background-color: #8fc1e3">
                     <div class="sidebar-profile">
                         <div class="sidebar-profile-image">
                             <img src="assets/images/profile-image.png" class="circle" alt="">
@@ -17,8 +17,8 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?>  
-                                <p><?php echo htmlentities($result->FirstName." ".$result->LastName);?></p>
-                                <span><?php echo htmlentities($result->EmpId)?></span>
+                                <p style="color: #31708e;"><?php echo htmlentities($result->FirstName." ".$result->LastName);?></p>
+                                <span style="color: #f7f9fb;"><?php echo htmlentities($result->EmpId)?></span>
                          <?php }} ?>
                         </div>
                     </div>
