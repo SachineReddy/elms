@@ -93,12 +93,17 @@ $cnt=1;
 if($query->rowCount() > 0)
 {
 foreach($results as $result)
-{               ?>  
+{
+$from_date = str_replace("/", "-", $result->FromDate);
+$from = htmlentities(date('m-d-Y',strtotime($from_date)));
+$to_date = str_replace("/", "-", $result->ToDate);
+$to = htmlentities(date('m-d-Y',strtotime($to_date)));
+               ?>  
                                         <tr>
                                             <td> <?php echo htmlentities($cnt);?></td>
                                             <td><?php echo htmlentities($result->LeaveType);?></td>
-                                            <td><?php echo htmlentities($result->FromDate);?></td>
-                                            <td><?php echo htmlentities($result->ToDate);?></td>
+                                            <td><?php echo $from;?></td>
+                                            <td><?php echo $to;?></td>
                                            <td><?php echo htmlentities($result->Description);?></td>
                                             <td><?php echo htmlentities(date('m-d-Y H:i:s',strtotime($result->PostingDate)));?></td>
                                             <td><?php if($result->AdminRemark=="")
