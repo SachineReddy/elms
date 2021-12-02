@@ -77,7 +77,7 @@ $error="Something went wrong. Please try again";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Add Leave Type</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Add Leave Type</div>
                     </div>
                     <div class="col s12 m12 25">
                         <div class="card">

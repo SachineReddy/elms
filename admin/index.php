@@ -30,7 +30,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
     <head>
         
         <!-- Title -->
-        <title>Employee leave management system |  Admin</title>
+        <title>ELMS | Home Page</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
@@ -46,7 +46,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
         <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-<nav class="navbar navbar-expand-lg navbar-light py-3">
+<nav class="navbar navbar-expand-lg navbar-light py-3"style="background-color:#31708E;">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -68,7 +68,7 @@ echo "<script type='text/javascript'> document.location = 'dashboard.php'; </scr
                           <div class="col-md-6 d-flex justify-content-center align-items-center">
                               <div class="card white darken-1">
                                   <div class="card-content">
-                                      <span class="card-title text-danger" style="font-size:20px;">Admin Login</span>
+                                      <span class="card-title" style="font-size:20px;color:#687864;">Admin Login</span>
                                        <div class="row">
                                            <form class="col s12" name="signin" method="post">
                                                <div class="input-field col s12">

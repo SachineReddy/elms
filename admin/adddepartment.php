@@ -80,7 +80,7 @@ $error="Something went wrong. Please try again";
 
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col s12">
-                        <div class="page-title" style="color:green;">Add Department</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Add Department</div>
                     </div>
                     <div class="col s12 m12 25">
                         <div class="card">

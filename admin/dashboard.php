@@ -44,7 +44,7 @@ else{
                 <div class="">
                     <div class="row no-m-t no-m-b">
                     <div class="col s12 m12 col-md-4 l4">
-                        <div class="card stats-card border-0 shadow bg-dark ">
+                        <div class="card stats-card border-0 shadow " style="background-color: #687864;">
                             <div class="card-content">
                             
                                 <span class="card-title text-white">Total Registered Employees</span>
@@ -63,39 +63,37 @@ $empcount=$query->rowCount();
                         </div>
                     </div>
                         <div class="col s12 m12 col-md-4 l4">
-                        <div class="card stats-card border-0 shadow bg-dark">
+                        <div class="card stats-card border-0 shadow " style="background-color: #687864;">
                             <div class="card-content">
                             
                                 <span class="card-title text-white">Total Departments </span>
-    <?php
-$sql = "SELECT id from departments_table";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$dptcount=$query->rowCount();
-?>                            
+                                    <?php
+                                $sql = "SELECT id from departments_table";
+                                $query = $dbh -> prepare($sql);
+                                $query->execute();
+                                $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                $dptcount=$query->rowCount();
+                                ?>                            
                                 <span class="stats-counter text-white"><span class="counter"><?php echo htmlentities($dptcount);?></span></span>
                             </div>
                             <div id="sparkline-line"></div>
                         </div>
                     </div>
                     <div class="col s12 m12 col-md-4 l4">
-                        <div class="card stats-card border-0 shadow bg-dark">
+                        <div class="card stats-card border-0 shadow " style="background-color: #687864;">
                             <div class="card-content">
                                 <span class="card-title text-white">Total leave Type</span>
                                     <?php
-$sql = "SELECT id from  leavetype_table";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$leavtypcount=$query->rowCount();
-?>   
+                                        $sql = "SELECT id from  leavetype_table";
+                                        $query = $dbh -> prepare($sql);
+                                        $query->execute();
+                                        $results=$query->fetchAll(PDO::FETCH_OBJ);
+                                        $leavtypcount=$query->rowCount();
+                                        ?>   
                                 <span class="stats-counter text-white"><span class="counter"><?php echo htmlentities($leavtypcount);?></span></span>
                       
                             </div>
-                            <div class="progress stats-card-progress">
-                                <div class="determinate" style="width: 70%"></div>
-                            </div>
+                            <div id="sparkline-line"></div>
                         </div>
                     </div>
                 </div>
@@ -105,17 +103,17 @@ $leavtypcount=$query->rowCount();
                             <div class="card invoices-card border-0 shadow">
                                 <div class="card-content">
                                  
-                                    <span class="card-title text-success">Latest Leave Applications</span>
+                                    <span class="card-title text-success" style="color: #687864;font-size: 20px;font-weight: bolder;">Latest Leave Applications</span>
                              <table id="example" class="display responsive-table bg-transparent">
                                     <thead>
                                         <tr>
-                                            <th class="text-danger">Sr No.</th>
-                                            <th width="200" class="text-danger">Employee Name</th>
-                                            <th width="120" class="text-danger">Leave Type</th>
+                                            <th style="color: #687864;">Sr No.</th>
+                                            <th width="200" style="color: #687864;">Employee Name</th>
+                                            <th width="120" style="color: #687864;">Leave Type</th>
 
-                                             <th width="180" class="text-danger">Posting Date</th>                 
-                                            <th class="text-danger">Status</th>
-                                            <th align="center" class="text-danger text-center" >Action</th>
+                                             <th width="180" style="color: #687864;">Posting Date</th>                 
+                                            <th style="color: #687864;">Status</th>
+                                            <th style="color: #687864;" >Action</th>
                                         </tr>
                                     </thead>
                                  
@@ -136,21 +134,17 @@ foreach($results as $result)
                                               <td><a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>" target="_blank"><?php echo htmlentities($result->FirstName." ".$result->LastName);?>(<?php echo htmlentities($result->EmpId);?>)</a></td>
                                             <td><?php echo htmlentities($result->LeaveType);?></td>
                                             <td><?php echo htmlentities(date('m-d-Y H:i:s',strtotime($result->PostingDate)));?></td>
-                                                                       <td><?php $stats=$result->Status;
-if($stats==1){
-                                             ?>
+                                            <td><?php $stats=$result->Status;
+                                                if($stats==1){
+                                                ?>
                                                  <span style="color: green">Approved</span>
                                                  <?php } if($stats==2)  { ?>
                                                 <span style="color: red">Not Approved</span>
                                                  <?php } if($stats==0)  { ?>
- <span style="color: blue">Waiting for Approval</span>
- <?php } ?>
-
-
-                                             </td>
-
-          <td>
-           <td><a href="leave-details.php?leaveid=<?php echo htmlentities($result->lid);?>" class="waves-effect waves-light btn blue m-b-xs"  > View Details</a></td>
+                                                <span style="color: blue">Waiting for Approval</span>
+                                                <?php } ?>
+                                             </td>          
+                                            <td><a href="leave-details.php?leaveid=<?php echo htmlentities($result->lid);?>" class="waves-effect waves-light btn blue m-b-xs"  > View Details</a></td>
                                     </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>

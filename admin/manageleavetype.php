@@ -71,7 +71,7 @@ $msg="Leave type record deleted";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Manage Leave Type</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Manage Leave Type</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
@@ -82,11 +82,11 @@ $msg="Leave type record deleted";
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
-                                            <th style="color: red;">Sr no</th>
-                                            <th style="color: red;">Leave Type</th>
-                                            <th style="color: red;">Description</th>
-                                            <th style="color: red;">Creation Date</th>
-                                            <th style="color: red;">Action</th>
+                                            <th style="color: #687864;">Sr no</th>
+                                            <th style="color: #687864;">Leave Type</th>
+                                            <th style="color: #687864;">Description</th>
+                                            <th style="color: #687864;">Creation Date</th>
+                                            <th style="color: #687864;width:150px;">Action</th>
                                         </tr>
                                     </thead>
                                  

@@ -86,7 +86,7 @@ header('location:manageemployee.php');
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Manage Employees</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Manage Employees</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
@@ -97,13 +97,13 @@ header('location:manageemployee.php');
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
-                                            <th style="color: red;">Sr no</th>
-                                            <th style="color: red;">Emp Id</th>
-                                            <th style="color: red;">Emp Name</th>
-                                            <th style="color: red;">Department</th>
-                                             <th style="color: red;">Status</th>
-                                             <th style="color: red;">Reg. Date</th>
-                                            <th style="color: red;">Action</th>
+                                            <th style="color: #687864;">Sr no</th>
+                                            <th style="color: #687864;">Emp Id</th>
+                                            <th style="color: #687864;">Emp Name</th>
+                                            <th style="color: #687864;">Department</th>
+                                             <th style="color: #687864;">Status</th>
+                                             <th style="color: #687864;">Reg. Date</th>
+                                            <th style="color: #687864;width:165px;">Action</th>
                                         </tr>
                                     </thead>
                                  

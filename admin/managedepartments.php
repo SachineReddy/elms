@@ -70,7 +70,7 @@ $msg="Department record deleted";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Manage Departments</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Manage Departments</div>
                     </div>
                     <div class="col s12 m12 l12">
                         <div class="card">
@@ -79,12 +79,12 @@ $msg="Department record deleted";
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
-                                            <th style="color: red;">Sr no</th>
-                                            <th style="color: red;">Dept Code</th>
-                                            <th style="color: red;">Dept Name</th>
-                                            <th style="color: red;">Dept Short Name</th>
-                                            <th style="color: red;">Creation Date</th>
-                                            <th style="color: red;">Action</th>
+                                            <th style="color: #687864;">Sr no</th>
+                                            <th style="color: #687864;">Dept Code</th>
+                                            <th style="color: #687864;">Dept Name</th>
+                                            <th style="color: #687864;">Dept Short Name</th>
+                                            <th style="color: #687864;">Creation Date</th>
+                                            <th style="color: #687864;width: 160px;">Action</th>
                                         </tr>
                                     </thead>
                                  

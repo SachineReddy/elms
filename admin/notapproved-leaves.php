@@ -62,7 +62,7 @@ else{
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;"> Not Approved Leave History</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;"> Not Approved Leave History</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
@@ -73,13 +73,13 @@ else{
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
-                                            <th style="color: red;">Sr No</th>
-                                            <th style="color: red;" width="200">Employee Name</th>
-                                            <th style="color: red;" width="120">Leave Type</th>
+                                            <th style="color: #687864;">Sr No</th>
+                                            <th style="color: #687864;" width="200">Employee Name</th>
+                                            <th style="color: #687864;" width="120">Leave Type</th>
 
-                                             <th style="color: red;"  width="180">Posting Date</th>                 
-                                            <th style="color: red;">Status</th>
-                                            <th style="color: red;" align="center">Action</th>
+                                             <th style="color: #687864;"  width="180">Posting Date</th>                 
+                                            <th style="color: #687864;">Status</th>
+                                            <th style="color: #687864;width:175px;" >Action</th>
                                         </tr>
                                     </thead>
                                  
@@ -116,7 +116,7 @@ if($stats==1){
 
                                              </td>
 
-          <td>
+          
            <td><a href="leave-details.php?leaveid=<?php echo htmlentities($result->lid);?>" class="waves-effect waves-light btn blue m-b-xs"  > View Details</a></td>
                                     </tr>
                                          <?php $cnt++;} }?>

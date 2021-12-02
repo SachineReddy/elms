@@ -64,7 +64,7 @@ $error="Your current password is wrong";
             <main class="mn-inner d-flex justify-content-center align-items-center">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Change Pasword</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Change Pasword</div>
                     </div>
                     <div class="col s12 m12 25">
                         <div class="card">
