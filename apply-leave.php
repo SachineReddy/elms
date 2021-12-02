@@ -93,7 +93,7 @@ $error="Something went wrong. Please try again";
    <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Apply for Leave</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Apply for Leave</div>
                     </div>
                     <div class="col s12 m12 25">
                         <div class="card">
@@ -111,11 +111,11 @@ $error="Something went wrong. Please try again";
 
 
 <div class="input-field col m6 s12">
-<label for="fromdate">From  Date</label>
+<label for="fromdate" class="active">From  Date</label>
 <input placeholder="" id="mask1" name="fromdate" class="masked" type="text" data-inputmask="'alias': 'date'" required>
 </div>
 <div class="input-field col m6 s12">
-<label for="todate">To Date</label>
+<label for="todate" class="active">To Date</label>
 <input placeholder="" id="mask1" name="todate" class="masked" type="text" data-inputmask="'alias': 'date'" required>
 </div>
 <div class="input-field col  s12">
@@ -142,7 +142,7 @@ foreach($results as $result)
 
 </div>
 <div align="center">
-      <button type="submit" name="apply" id="apply" class="waves-effect waves-light btn indigo m-b-xs">Apply</button>                                             
+      <button type="submit" name="apply" id="apply" class="waves-effect waves-light btn  m-b-xs" >Apply</button>                                             
 
                                                 </div>
                                             </div>

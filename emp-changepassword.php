@@ -81,7 +81,7 @@ $error="Your current password is wrong";
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title" style="color: green;">Change Pasword</div>
+                        <div class="page-title" style="color: #687864;font-size: 20px;font-weight: bolder;">Change Password</div>
                     </div>
                     <div class="col s12 m12 25">
                         <div class="card" >
@@ -109,7 +109,7 @@ $error="Your current password is wrong";
 
 
 <div class="input-field col s12" align="center">
-<button type="submit" name="change"  class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Change</button>
+<button type="submit" name="change"  class="waves-effect waves-light btn m-b-xs"  onclick="return valid();">Change</button>
 
 </div>
 

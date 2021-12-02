@@ -70,14 +70,14 @@ else{
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
-                                            <th style="color: red;">Sr No.</th>
-                                            <th style="color: red;" width="120">Type Of Leave</th>
-                                            <th style="color: red;">From</th>
-                                            <th style="color: red;">To</th>
-                                             <th style="color: red;">Description</th>
-                                             <th style="color: red;" width="120">Posting Date</th>
-                                            <th style="color: red;" width="200">Admin Remak</th>
-                                            <th style="color: red;">Status</th>
+                                            <th style="color: #687864;">Sr No.</th>
+                                            <th style="color: #687864;" width="120">Type Of Leave</th>
+                                            <th style="color: #687864;">From</th>
+                                            <th style="color: #687864;">To</th>
+                                             <th style="color: #687864;">Description</th>
+                                             <th style="color: #687864;" width="120">Posting Date</th>
+                                            <th style="color: #687864;" width="200">Admin Remak</th>
+                                            <th style="color: #687864;">Status</th>
                                         </tr>
                                     </thead>
                                  
@@ -118,7 +118,7 @@ if($stats==1){
                                                  <?php } if($stats==2)  { ?>
                                                 <span style="color: red">Not Approved</span>
                                                  <?php } if($stats==0)  { ?>
- <span style="color: blue">Waiting for Approval</span>
+ <span style="color: #31708e">Waiting for Approval</span>
  <?php } ?>
 
                                              </td>

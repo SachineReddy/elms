@@ -64,7 +64,7 @@ else{
     </head>
     <body>
 
-                <nav class="navbar navbar-expand-lg navbar-light py-3">
+                <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color:#31708E;">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -89,7 +89,7 @@ else{
                               <div class="card white darken-1">
 
                                   <div class="card-content ">
-                                      <span class="card-title text-danger" style="font-size:20px;">Employee Login</span>
+                                      <span class="card-title " style="font-size:20px;color:#687864;">Employee Login</span>
                                          <?php if($msg){?><div class="errorWrap"><strong>Error</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                        <div class="row">
                                            <form class="col col-md-12 " name="signin" method="post">
