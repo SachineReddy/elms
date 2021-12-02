@@ -1,14 +1,11 @@
 
-        <div class="mn-content fixed-sidebar">
-            <header class="mn-header navbar-fixed">
-
-
-                <nav class="navbar navbar-expand-lg navbar-light py-3 " >
-                    <div class="nav-wrapper row">
-                  <marquee width="950px" direction="left" behavior="alternate" ><span style="font-size:38px; width=''font-weight:bold;color:#1F7A8C;font-family:'lobster', cursive;">Employee Leave Management System</span>
-        </marquee>
-          <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex justify-content-center align-items-center">
+<div class="mn-content fixed-sidebar">
+    <header class="mn-header navbar-fixed">
+        <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color: #31708E;">
+                <div class="nav-wrapper row" style="">
+                <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarNavAltMarkup" style="text-align: center;">
+             <span style="font-size:38px;font-weight:bold;color:#f7f9fb;font-family:'lobster', cursive;">Employee Leave Management System</span>
+                    <div class="navbar-nav d-flex justify-content-center align-items-center">
           
   
           </div>
